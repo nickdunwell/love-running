@@ -1,14 +1,13 @@
-/*Google fonts import */
+/* Google fonts import */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
-    margin:  0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -17,9 +16,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /*generic project styles */
+    /* Generic project styles */
     color: #3a3a3a;
-    font-family: "lato", sans-serif;
+    font-family: 'lato', sans-serif;
 }
 /* Header */
 header {
@@ -69,8 +68,8 @@ nav {
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
-}   
-/* nav toggle */
+}
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -82,7 +81,7 @@ nav {
 .nav-toggle-label {
     font-size: 2rem;
 }
-/* Main Content */
+/* Main content */
 main {
     background-color: lightblue;
     flex: 1 0 auto;
@@ -95,14 +94,44 @@ footer {
 }
 
 /* Media query: tablets and larger (768px and up) */
-@media screen (min-width: 768px) {
-    /* Header*/
+@media screen and (min-width: 768px) {
+    /* Header */
     nav {
         display: block;
         position: relative;
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-        
     }
+
+#menu {
+    display: flex;
+}
+
+#menu > li {
+    padding-left: 1rem;
+}
+
+.nav-toggle-label {
+    display: none;
+}
+
+#logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+}
+
+/* Main content */
+main {
+    /* Push main content down to accommodate larger header */
+    margin-top: 79px;
+}
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+#menu a:hover{
+    border-bottom: 1px solid #3a3a3a;
+}
 }
